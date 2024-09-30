@@ -1,0 +1,48 @@
+ img{
+    width: 100%;
+    /*border-radius: 5%;*/
+ }
+ p{
+    margin: 5px;
+ }
+ .gallery{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+ }
+ .contentwrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ .content{
+    max-width: 20%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    max-width: 25%;
+    width: 100%;
+ }
+
+ .content img{
+   height: auto;
+   transition: transform .6s ease;
+}
+
+.content:hover img {
+   transform: scale(1.05); 
+ }
+
+ .gallery-title{
+    text-align: center;
+    font-weight: bold;
+ }
+ .gallery-tag{
+   font-family:  'Arial';
+   font-size: 10px;
+ }
+
+ summary{
+   cursor: pointer;
+ }
+
