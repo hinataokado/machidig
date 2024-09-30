@@ -20,34 +20,6 @@
   height: 50px;
 }
 
-/* メニューバーのスタイル */
-/*.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px 0;
-  background-color: 
-333;
-  transition: 0.4s;
-}*/
-
-/* メニューボタンがチェックされた場合の1つ目のバーのアニメーション */
-/*
-menu-toggle:checked ~ .menu-button .bar:nth-child(1) {
-  transform: rotate(45deg) translate(-2px, 3px);
-}
-
-/* メニューボタンがチェックされた場合の2つ目のバーのアニメーション */
-/*
-menu-toggle:checked ~ .menu-button .bar:nth-child(2) {
-  opacity: 0;
-}
-
-/* メニューボタンがチェックされた場合の3つ目のバーのアニメーション */
-/*
-menu-toggle:checked ~ .menu-button .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -13px);
-} 
 
 /* メニュートグルのスタイル */
 
