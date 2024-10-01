@@ -1,13 +1,3 @@
-/* メニューコンテナ全体のスタイル */
-/*.menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 /* メニューボタンのスタイル */
 .menu-button {
   display: block;
@@ -46,12 +36,6 @@
 #menu-toggle:checked~.menu {
   left: 0;
   /* メニューを表示させるために left を 0 に変更 */
-}
-
-/* メニュー内のリストのスタイル 
-.menu ul {
-  list-style: none;
-  padding: 18px;
 }
 
 /* メニュー内リストのリンクのスタイル */
