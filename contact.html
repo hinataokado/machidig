@@ -34,19 +34,19 @@
   </div>
 
   <h1>CONTACT（改装中/ under construction）</h1>
-  <p>
-    <form>
-      <div>
+  <p id="contact">
+    <form method="post">
+      <div class="ctccontent">
           <label for="name">お名前/name：</label>
           <input id="name" type="text" name="name" placeholder="name">
       </div>
      
-      <div>
+      <div class="ctccontent">
           <label for="mail">メールアドレス/email：</label>
           <input id="mail" type="email" name="email" placeholder="email">
       </div>
      
-      <div>
+      <div class="ctccontent">
           <label for="comment">お問い合わせ内容/comment：</label><br >
           <textarea id="comment" rows="10" cols="30" placeholder="type your comment"></textarea>
       </div>
@@ -64,5 +64,13 @@
   <link rel="stylesheet" href="imgscommon.css">
   <link rel="stylesheet" href="menu.css">
 </body>
+<style>
+#contact {
 
+}
+
+.ctccontent{
+  text-align: left;
+}
+</style>
 </html>
