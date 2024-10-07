@@ -47,7 +47,7 @@
           <input id="mail" type="email" name="email" placeholder="email" required>
       </div>
      
-      <div class="item">
+      <div class="itemtext">
           <label for="comment">お問い合わせ内容/comment：</label><br >
           <textarea id="comment" rows="10" cols="30" placeholder="type your comment"></textarea>
       </div>
@@ -67,13 +67,18 @@
   <link rel="stylesheet" href="menu.css">
 </body>
 <style>
-#contact{
-  display: block;
+.contact{
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .item{
   text-align:left;
+}
+
+.itemtext{
+  text-align: center;
 }
 
 </style>
