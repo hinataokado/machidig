@@ -103,15 +103,15 @@
     }
 
     //fetch（外部からデータをもらう関数）のpost機能で送信
-    //fetch("form.php", {
-      //method: "POST",
-      //body: data,                                //送信する内容
-      //headers: {                                  //送信する内容の種類を伝える
-       // "Content-Type": "application/json",
-      //},
-    //})
-      //.then((res) => res.json())
-      //.then((res) => console.log(res));
+    fetch("form.php", {
+      method: "POST",
+      body: data,                                //送信する内容
+      headers: {                                  //送信する内容の種類を伝える
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
   });                             
 </script>
 </html>
