@@ -36,7 +36,7 @@
   <h1>CONTACT（改装中/ under construction）</h1>
   <p>
   <div class="contact">
-    <form action="" method="post">
+    <form method="post">
       <div class="item">
         <label for="name">お名前/name：</label>
         <input id="name" type="text" name="name" placeholder="name" required>
@@ -52,39 +52,12 @@
         <textarea id="comment" rows="10" cols="30" placeholder="type your comment"></textarea>
       </div>
 
-      <div class="btn-area">
+      <div id="btn">
         <input type="submit" value="送信/submit">
       </div>
 
     </form>
   </div>
-
-  <script>
-    const form = document.querySelector(".form");
-    console.log(form)
-
-    form.addEventListener("submit", (e) => {           //submitを押したときに発動
-      e.preventDefault();                         //form要素で送信先が未指定の時デフォで現在のURLに送信するのを防ぐ
-      alert('送信完了/successfully submit')
-      const data = new FormData(form);             //newでformをインスタンス化(コピー)
-      console.log(data);
-      for (c of data) {
-        //console.log(c);                       //forでまとめて入力内容を取得しても入力項目ごとに配列で分けられる。
-        console.log(c[0], c[1]);                 //キーと値を別々に取り出せる
-      }
-
-      //fetch（外部からデータをもらう関数）のpost機能で送信
-      fetch("URL", {
-        method: "POST",
-        body: data,                                //送信する内容
-        headers: {                                  //送信する内容の種類を伝える
-          "Content-Type": "application/json",
-        },
-      })
-        .then((res) => res.json())
-        .then((res) => console.log(res));
-    });                             
-  </script>
   </p>
   <p>
     &copy;machi-dig, 2024
@@ -109,4 +82,36 @@
   }
 </style>
 
+<script>
+
+  const form = document.querySelector(".form");
+  console.log(form)
+
+  const btn = document.getElementById('btn');
+
+  //submitを押したときに発動
+  
+  btn.addEventListener("submit", (e)=>{ 
+    e.preventDefault(); 
+    e.stopPropagation();                      //form要素で送信先が未指定の時デフォで現在のURLに送信するのを防ぐ
+    alert('送信完了/successfully submit')
+    const data = new FormData(form);             //newでformをインスタンス化(コピー)
+    console.log(data);
+    for (c of data) {
+      //console.log(c);                       //forでまとめて入力内容を取得しても入力項目ごとに配列で分けられる。
+      console.log(c[0], c[1],c[2]);                 //キーと値を別々に取り出せる
+    }
+
+    //fetch（外部からデータをもらう関数）のpost機能で送信
+    //fetch("form.php", {
+      //method: "POST",
+      //body: data,                                //送信する内容
+      //headers: {                                  //送信する内容の種類を伝える
+       // "Content-Type": "application/json",
+      //},
+    //})
+      //.then((res) => res.json())
+      //.then((res) => console.log(res));
+  });                             
+</script>
 </html>
