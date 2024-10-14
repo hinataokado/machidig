@@ -1,8 +1,13 @@
 <?php
-$raw = file_get_contents('php://input'); // POSTされた生のデータを受け取る
-$data = json_decode($raw); // json形式をphp変数に変換
+// POSTデータを取得
+$data = $_POST;
 
-$res = $data; // やりたい処理
+// レスポンスを作成
+$response = array('message' => 'Data received!', 'data' => $data);
 
-// echoすると返せる
-echo json_encode($res); // json形式にして返す
+// レスポンスヘッダーを設定
+header('Content-Type: application/json');
+
+// JSON形式でレスポンスを出力
+echo json_encode($response);
+?>
