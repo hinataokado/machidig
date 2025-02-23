@@ -25,10 +25,10 @@
   /* 変更: メニューを左からスライドインさせるために left に設定 */
   width: 20%;
   height: 100%;
-  background-color: rgba(255, 0, 0, 0.5)
-  transition: 0.4s;
-  z-index: 1;
-  overflow-y: auto;
+  background-color: rgba(255, 0, 0, 0.5);
+  transition : 0.4s;
+  z-index : 1;
+  overflow-y : auto;
 }
 
 /* メニュートグルがチェックされた場合のメニューの表示アニメーション */
